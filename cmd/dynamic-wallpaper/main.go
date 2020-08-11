@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("Current wallpaper:", background)
 
 	// Works fine with linux but does not revert on windows
-	err = wallpaper.SetFromURL("https://picsum.photos/1920/1080")
+	err = wallpaper.SetFromURL("https://source.unsplash.com/random/1920x1080")
 	if err != nil {
 		panic(err)
 	}
