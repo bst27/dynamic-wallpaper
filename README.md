@@ -1,3 +1,5 @@
+![dynamicWallpaper](https://raw.githubusercontent.com/bst27/dynamic-wallpaper/master/website/banner.png)
+
 # About
 This app changes your wallpaper. You can give an URL to define where to get the wallpaper(s) from.
 To define when to change your wallpaper you can use a cron expression.
