@@ -13,17 +13,18 @@ func main() {
 	flag.Parse()
 
 	c := cron.New()
-	c.AddFunc(*cronFlag, func() {
+	_, err := c.AddFunc(*cronFlag, func() {
 		// Silently ignore errors and hope for success in the next try
 		_ = changeWallpaper(*wallpaperURL)
 	})
 
-	c.Start()
-
-	if len(c.Entries()) == 0 {
-		fmt.Println("Invalid cron expression. For help visit https://crontab.guru")
+	if err != nil {
+		fmt.Println("Invalid cron expression.", "For help visit https://crontab.guru")
+		fmt.Println(err)
 		return
 	}
+
+	c.Start()
 
 	// Block forever until app is stopped
 	select {}
