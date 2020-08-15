@@ -5,12 +5,19 @@ import (
 	"fmt"
 	"github.com/reujab/wallpaper"
 	"github.com/robfig/cron/v3"
+	"os"
 )
 
 func main() {
 	var cronFlag = flag.String("cron", "* * * * *", "Cron expression which defines when to change wallpaper")
 	var wallpaperURL = flag.String("url", "https://source.unsplash.com/random/1920x1080", "URL which returns a wallpaper image")
 	flag.Parse()
+
+	args := os.Args
+	if len(args) == 2 && args[1] == "help" {
+		flag.PrintDefaults()
+		os.Exit(0)
+	}
 
 	c := cron.New()
 	_, err := c.AddFunc(*cronFlag, func() {

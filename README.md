@@ -10,6 +10,14 @@ Per default your wallpaper is changed every minute with a random image from [Uns
 ```
 ./dynamic-wallpaper -url "<URL>" -cron "<CRON>"
 ```
+You can pass a `help` argument to view a help message:
+```
+  -cron string
+        Cron expression which defines when to change wallpaper (default "* * * * *")
+  -url string
+        URL which returns a wallpaper image (default "https://source.unsplash.com/random/1920x1080")
+
+```
 
 # Examples
 | URL                                          | Info                                            | See                          |
