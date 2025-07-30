@@ -10,7 +10,7 @@ import (
 
 func main() {
 	var cronFlag = flag.String("cron", "* * * * *", "Cron expression which defines when to change wallpaper")
-	var wallpaperURL = flag.String("url", "https://source.unsplash.com/random/1920x1080", "URL which returns a wallpaper image")
+	var wallpaperURL = flag.String("url", "https://picsum.photos/1920/1080", "URL which returns a wallpaper image")
 	flag.Parse()
 
 	args := os.Args

@@ -4,7 +4,7 @@
 This app changes your wallpaper. You can give an URL to define where to get the wallpaper(s) from.
 To define when to change your wallpaper you can use a cron expression.
 
-Per default your wallpaper is changed every minute with a random image from [Unsplash](https://unsplash.com).
+Per default your wallpaper is changed every minute with a random image from [Picsum](https://picsum.photos).
 
 # Usage:
 ```
@@ -15,15 +15,14 @@ You can pass a `help` argument to view a help message:
   -cron string
         Cron expression which defines when to change wallpaper (default "* * * * *")
   -url string
-        URL which returns a wallpaper image (default "https://source.unsplash.com/random/1920x1080")
+        URL which returns a wallpaper image (default "https://picsum.photos/1920/1080")
 
 ```
 
 # Examples
-| URL                                          | Info                                            | See                          |
-|----------------------------------------------|-------------------------------------------------|------------------------------|
-| https://source.unsplash.com/random/1920x1080 | Get random image with 1920x1080px from Unsplash | https://source.unsplash.com/ |
-| https://loremflickr.com/1920/1080/dog        | Get random dog image with 1920x1080px           | https://loremflickr.com/     |
+| URL                             | Info                                          | See                    |
+|---------------------------------|-----------------------------------------------|------------------------|
+| https://picsum.photos/1920/1080 | Get random image with 1920x1080px from Picsum | https://picsum.photos/ |
 
 | Cron | Info |
 |------|------|
